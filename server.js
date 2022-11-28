@@ -36,7 +36,7 @@ app.get('/app/roll/:sides/:dice/', (req, res) => {
 
 app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
 	const sides = parseInt(req.params.sides);
-	const dice = parseInt(req.body.dice);
+	const dice = parseInt(req.params.dice);
 	const rolls = parseInt(req.body.rolls);
 	res.status(200).send(roll(sides, dice, rolls));
 });
