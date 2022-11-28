@@ -13,7 +13,7 @@ app.get('/app/', (req, res) => {
 	res.status(200).send('200 OK');
 });
 
-app.get('/app/', (req, res) => {
+app.get('/app/roll/', (req, res) => {
 	res.send(roll(6, 2, 1));
 });
 
