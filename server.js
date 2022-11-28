@@ -38,3 +38,7 @@ app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
 	const rolls = parseInt(req.body.rolls);
 	res.send(roll(sides, dice, rolls));
 });
+
+app.get('*', (req, res) => {
+	res.status(404).send("404 NOT FOUND");
+});
