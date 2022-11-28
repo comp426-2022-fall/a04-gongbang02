@@ -29,7 +29,7 @@ app.get('/app/roll/:sides/', (req, res) => {
 });
 
 app.get('/app/roll/:sides/:dice/', (req, res) => {
-	res.send(roll(parseInt(req.body.sides), parseInt(req.body.dice), 1));
+	res.status(200).send(roll(parseInt(req.body.sides), parseInt(req.body.dice), 1));
 });
 
 app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
