@@ -17,4 +17,8 @@ app.get('/app/roll/', (req, res) => {
 	res.send(roll(6, 2, 1));
 });
 
+app.post('/app/roll/', (req, res) => {
+	const sides = parseInt(req.body.sides);
+});
+
 
