@@ -24,3 +24,6 @@ app.post('/app/roll/', (req, res) => {
 	res.send(roll(sides, dice, rolls));
 });
 
+app.get('/app/roll/:sides/', (req, res) => {
+	res.send(roll(parseInt(req.body.sides), 2, 1));
+});
