@@ -8,3 +8,6 @@ const port = args.port || 5000;
 
 app.use(express.urlencoded({extended: true}));
 
+app.get('/app/', (req, res) => {
+	res.send(roll(6, 2, 1));
+});
